@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://db.onlinewebfonts.com/c/f57fc27cf6596753c498bb08cf426356?family=F8514oem" rel="stylesheet">
+        <title>
+            REDIND(TM) COM-EX
+        </title>
+    </head>
+    <body>
+        <div id="CopyrightAndStuff">
+            <p>
+            Command Executor V1.2 (1.04.3052)
+            </p>
+            <p>
+                R.E.D Industries (TM). 3052. All rights reserved
+            </p>
+            <p>type 'cmdlist' to open list of available commands</p>
+            <blacktext>oi oi, you found an easter egg!</blacktext>
+        </div>
+        <div id="UserOutput">
+
+        </div>
+        <div id="UserInput">
+            <label>
+                 C:/>
+            </label>
+            <input type="text" id = "CommandInput1" name = "CMDinput" onchange="trigger()">;
+        </div>
+        <script>
+            let CMDIN = document.getElementById("CommandInput1").value
+        function trigger() {
+            if (document.getElementById("CommandInput1").value === "cmdlist"){
+                const brPara = document.createElement("p");
+                const brText = document.createTextNode("C:/> cmdlist");
+                brPara.appendChild(brText);
+                document.getElementById("UserOutput").appendChild(brPara);
+                const brPara1 = document.createElement("p");
+                const brText1 = document.createTextNode("dir - check all files in current directory");
+                brPara1.appendChild(brText1);
+                document.getElementById("UserOutput").appendChild(brPara1);
+                const BrPara2 = document.createElement("p");
+                const BrText2 = document.createTextNode("clear - clears the window");
+                BrPara2.appendChild(BrText2);
+                document.getElementById("UserOutput").appendChild(BrPara2);
+            }
+            else if (document.getElementById("CommandInput1").value === "dir") {
+                const dir1Para = document.createElement("p");
+                const dir1Text = document.createTextNode("C:/> dir");
+                dir1Para.appendChild(dir1Text);
+                document.getElementById("UserOutput").appendChild(dir1Para);
+                const DirPara = document.createElement("p");
+                const DirText = document.createTextNode("Current Volume (C:/) has no label");
+                DirPara.appendChild(DirText);
+                document.getElementById("UserOutput").appendChild(DirPara);
+                const DirPara2 = document.createElement("p");
+                const DirText2 = document.createTextNode("Volume Serial Number is: [RD52-7232]");
+                DirPara2.appendChild(DirText2);
+                document.getElementById("UserOutput").appendChild(DirPara2);
+                const DirPara3 = document.createElement("p");
+                const DirText3 = document.createTextNode("--------------------");
+                DirPara3.appendChild(DirText3);
+                document.getElementById("UserOutput").appendChild(DirPara3);
+                const DirPara4 = document.createElement("p");
+                const DirText4 = document.createTextNode("25.06.3052 03:21 <DIR> <ADMINONLY> System64");
+                DirPara4.appendChild(DirText4);
+                document.getElementById("UserOutput").appendChild(DirPara4);
+                const DirPara5 = document.createElement("p");
+                const DirText5 = document.createTextNode("25.06.3052 03:21 <DIR> <ADMINONLY> BOOTLOADER");
+                DirPara5.appendChild(DirText5);
+                document.getElementById("UserOutput").appendChild(DirPara5);
+                const DirPara6 = document.createElement("p");
+                const DirText6 = document.createTextNode("03.03.3072 19:33 _________________ JCII.docx");
+                DirPara6.appendChild(DirText6);
+                document.getElementById("UserOutput").appendChild(DirPara6);
+                
+            }
+            else if (document.getElementById("CommandInput1").value === "System64") {
+                const Lock1Para = document.createElement("p");
+                const Lock1Text = document.createTextNode("C:/> System64");
+                Lock1Para.appendChild(Lock1Text);
+                document.getElementById("UserOutput").appendChild(Lock1Para);
+                const SysPara = document.createElement("p");
+                const SysText = document.createTextNode("Can't Access File/Directory - Low Priority User");
+                SysPara.appendChild(SysText);
+                document.getElementById("UserOutput").appendChild(SysPara);
+            }
+            else if (document.getElementById("CommandInput1").value === "BOOTLOADER") {
+                const Lock2Para = document.createElement("p");
+                const Lock2Text = document.createTextNode("C:/> BOOTLOADER");
+                Lock2Para.appendChild(Lock2Text);
+                document.getElementById("UserOutput").appendChild(Lock2Para);
+                const BootPara = document.createElement("p");
+                const BootText = document.createTextNode("Can't Access File/Directory - Low Priority User");
+                BootPara.appendChild(BootText);
+                document.getElementById("UserOutput").appendChild(BootPara);
+            }
+            else if (document.getElementById("CommandInput1").value === "JCII.docx"){
+                const Doc1Para = document.createElement("p");
+                const Doc1Text = document.createTextNode("C:/> JCII.docx");
+                Doc1Para.appendChild(Doc1Text);
+                document.getElementById("UserOutput").appendChild(Doc1Para);
+                const image = document.createElement("img");
+                image.src = "JamesCII.png";
+                document.getElementById("UserOutput").appendChild(image)
+            }
+            else if (document.getElementById("CommandInput1").value === "clear") {
+                var div = document.getElementById("UserOutput");
+                while (div.firstChild) {
+                    div.removeChild(div.firstChild);
+                }
+            }
+            else {
+                const FalsePara = document.createElement("p");
+                const FalseText = document.createTextNode("C:/>");
+                FalsePara.appendChild(FalseText);
+                document.getElementById("UserOutput").appendChild(FalsePara);
+                const FalsePara1 = document.createElement("p");
+                const FalseText1 = document.createTextNode("Unknown Command");
+                FalsePara1.appendChild(FalseText1);
+                document.getElementById("UserOutput").appendChild(FalsePara1);
+            }
+        }
+        </script>
+    </body>
+</html>

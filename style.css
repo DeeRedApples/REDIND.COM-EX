@@ -1,0 +1,72 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: left;
+    color: ghostwhite;
+}
+
+img {
+    color: ghostwhite;
+    max-width: 512px;
+    max-height: 1024px;
+}
+
+p {
+    color: ghostwhite;
+    font-size: 16px;
+    font-family: "F8514oem";
+}
+
+input {
+    color: ghostwhite;
+    font-size: 16px;
+    font-family: "F8514oem";
+    border: none;
+    background: none;
+    outline: none;
+    width: 95%;
+}
+
+label{
+    color: ghostwhite;
+    font-size: 16px;
+    font-family: "F8514oem";
+}
+
+blinker{
+        color: ghostwhite;
+        animation: blink 1s step-end infinite 
+    }
+    @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+cautiontext{
+    color: orange;
+    font-size: 16px;
+    font-family: "F8514oem";
+}
+
+warningtext{
+    color: crimson;
+    font-size: 16px;
+    font-family: "F8514oem";
+}
+
+blacktext{
+    color: black;
+    font-size: 16px;
+    font-family: "F8514oem";
+}
+
+input[type="password"]{
+    color:ghostwhite !important;
+    outline-color: ghostwhite;
+    ::-moz-placeholder { color: ghostwhite; }  /* Firefox */  
+    ::-webkit-input-placeholder { color: ghostwhite; }  /* Safari, Opera, Chrome */  
+    :-ms-input-placeholder { color: ghostwhite; }  /* IE */ 
+}

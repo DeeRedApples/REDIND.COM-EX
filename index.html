@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://db.onlinewebfonts.com/c/f57fc27cf6596753c498bb08cf426356?family=F8514oem" rel="stylesheet">
+        <title>
+            WDF COM-EX Login
+        </title>
+    </head>
+    <body>
+        <div>
+            <p>
+                WDF Remote server Command Executor access panel
+            </p>
+        </div>
+        <div id="Text">
+            <p>Please login to continue</p>
+            <blacktext>Broskie</blacktext>
+        </div>
+        <div id="Input">
+            <input type="text" placeholder="Username" id="UserInput" name="UserInput" required>
+            <input type="password" placeholder="Password" id="PassInput" name="PassInput" required>
+            <input type="text" placeholder="Proceed? (Y/N)" id="Submit" required name="Submit" onchange="SubmitTrigger()" required>
+        </div>
+        <div id="Output">
+
+        </div>
+        <script>
+            var STAFFuser = "JulieBrown"
+            var STAFFpass = "JBSoup123"
+            var Submitter = "Y" || "y"
+            function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+            }  
+            async function SubmitTrigger() {
+                if (document.getElementById("UserInput").value === "JulieBrown" && document.getElementById("PassInput").value === "JBSoup123" && document.getElementById("Submit").value == "Y") {
+                    await sleep(3000)
+                    const Success1Para = document.createElement("p");
+                    const Success1Text = document.createTextNode("Login Successful, Redirecting...");
+                    Success1Para.appendChild(Success1Text);
+                    document.getElementById("Output").appendChild(Success1Para);
+                    const Success2Para = document.createElement("blinker");
+                    const Success2Text = document.createTextNode("[]");
+                    Success2Para.appendChild(Success2Text);
+                    document.getElementById("Output").appendChild(Success2Para);
+                    await sleep(5000);
+                    window.open("com-ex.html", "_self")
+                }
+                else {
+                    await sleep(3000)
+                    const fail1Para = document.createElement("p");
+                    const fail1Text = document.createTextNode("Login failed - Invalid User/Password or no consent to proceed given");
+                    fail1Para.appendChild(fail1Text);
+                    document.getElementById("Output").appendChild(fail1Para);
+                }
+                await sleep(10000)
+                var div = document.getElementById("Output");
+                while (div.firstChild) {
+                    div.removeChild(div.firstChild);
+                }
+            }
+        </script>
+    </body>
+</html>
