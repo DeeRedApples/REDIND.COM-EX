@@ -10,7 +10,7 @@
     <body>
         <div id="CopyrightAndStuff">
             <p>
-            Command Executor V1.2 (1.04.3052)
+            Command Executor V1.3 (14.04.3052)
             </p>
             <p>
                 R.E.D Industries (TM). 3052. All rights reserved
@@ -73,7 +73,39 @@
                 const DirText6 = document.createTextNode("03.03.3072 19:33 _________________ JCII.docx");
                 DirPara6.appendChild(DirText6);
                 document.getElementById("UserOutput").appendChild(DirPara6);
+                const DirPara7 = document.createElement("p");
+                const DirText7 = document.createTextNode("14.04.3065 00:33 _________________ WDFDOC-431.html");
+                DirPara7.appendChild(DirText7);
+                document.getElementById("UserOutput").appendChild(DirPara7);
+                const DirPara8 = document.createElement("p");
+                const DirText8 = document.createTextNode("11.04.3065 12:33 _________________ JCIIroulette.png");
+                DirPara8.appendChild(DirText8);
+                document.getElementById("UserOutput").appendChild(DirPara8);
                 
+            }
+            else if (document.getElementById("CommandInput1").value === "WDFDOC-431.html") {
+                const ae1Para = document.createElement("p");
+                const ae1Text = document.createTextNode("C:/> WDFDOC-431.html");
+                ae1Para.appendChild(ae1Text);
+                document.getElementById("UserOutput").appendChild(ae1Para);
+                window.open("WDF Document No. 431.html")
+            }
+            else if (document.getElementById("CommandInput1").value === "JCIIroulette.png") {
+                const oi1Para = document.createElement("p");
+                const oi1Text = document.createTextNode("C:/> JCIIroulette.png");
+                oi1Para.appendChild(oi1Text);
+                document.getElementById("UserOutput").appendChild(oi1Para);
+                const image1 = document.createElement("img");
+                image1.src = "JCIIRoul1.png";
+                document.getElementById("UserOutput").appendChild(image1)
+                const oi3Para = document.createElement("p");
+                const oi3Text = document.createTextNode("'Rules are simple: six chambers, one bullet, winner wins everything, loser dies quickly. So, are you ready to gamble your life?'");
+                oi3Para.appendChild(oi3Text);
+                document.getElementById("UserOutput").appendChild(oi3Para);
+                const oi2Para = document.createElement("p");
+                const oi2Text = document.createTextNode("Note: Who added this? please delete it later, it wastes our precious storage!");
+                oi2Para.appendChild(oi2Text);
+                document.getElementById("UserOutput").appendChild(oi2Para);
             }
             else if (document.getElementById("CommandInput1").value === "System64") {
                 const Lock1Para = document.createElement("p");
